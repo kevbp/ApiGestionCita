@@ -2,7 +2,7 @@
 package Clinica.ApiGestionCita;
 
 public class HorarioDTO {
-
+    
     private Long id;
     private Long idCon;
     private Long idMed;

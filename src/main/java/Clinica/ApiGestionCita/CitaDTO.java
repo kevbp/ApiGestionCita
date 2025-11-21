@@ -3,7 +3,7 @@ package Clinica.ApiGestionCita;
 public class CitaDTO {
 
     private Long id;
-    private Long idHor;
+    private Long idSlo;
     private Long idPac;
     private Long idEsp;
     private Long idMed;
@@ -17,9 +17,9 @@ public class CitaDTO {
     public CitaDTO() {
     }
 
-    public CitaDTO(Long id, Long idHor, Long idPac, Long idEsp, Long idMed, String fec, String hor, double pre, String estPag, Long idEmp, String estCit) {
+    public CitaDTO(Long id, Long idSlo, Long idPac, Long idEsp, Long idMed, String fec, String hor, double pre, String estPag, Long idEmp, String estCit) {
         this.id = id;
-        this.idHor = idHor;
+        this.idSlo = idSlo;
         this.idPac = idPac;
         this.idEsp = idEsp;
         this.idMed = idMed;
@@ -39,12 +39,12 @@ public class CitaDTO {
         this.id = id;
     }
 
-    public Long getIdHor() {
-        return idHor;
+    public Long getIdSlo() {
+        return idSlo;
     }
 
-    public void setIdHor(Long idHor) {
-        this.idHor = idHor;
+    public void setIdSlo(Long idSlo) {
+        this.idSlo = idSlo;
     }
 
     public Long getIdPac() {
@@ -118,4 +118,5 @@ public class CitaDTO {
     public void setEstCit(String estCit) {
         this.estCit = estCit;
     }
+
 }

@@ -2,63 +2,33 @@ package Clinica.ApiGestionCita;
 
 public class Entrada {
 
-    private String nom;
-    private int dni;
-    private double pes;
-    private double tal;
-    private int eda;
+    private Long idPac;
+    private Long idSlo;
     private Long idEmp;
 
     public Entrada() {
     }
 
-    public Entrada(String nom, int dni, double pes, double tal, int eda, Long idEmp) {
-        this.nom = nom;
-        this.dni = dni;
-        this.pes = pes;
-        this.tal = tal;
-        this.eda = eda;
+    public Entrada(Long idPac, Long idSlo, Long idEmp) {
+        this.idPac = idPac;
+        this.idSlo = idSlo;
         this.idEmp = idEmp;
     }
 
-    public String getNom() {
-        return nom;
+    public Long getIdPac() {
+        return idPac;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setIdPac(Long idPac) {
+        this.idPac = idPac;
     }
 
-    public int getDni() {
-        return dni;
+    public Long getIdSlo() {
+        return idSlo;
     }
 
-    public void setDni(int dni) {
-        this.dni = dni;
-    }
-
-    public double getPes() {
-        return pes;
-    }
-
-    public void setPes(double pes) {
-        this.pes = pes;
-    }
-
-    public double getTal() {
-        return tal;
-    }
-
-    public void setTal(double tal) {
-        this.tal = tal;
-    }
-
-    public int getEda() {
-        return eda;
-    }
-
-    public void setEda(int eda) {
-        this.eda = eda;
+    public void setIdSlo(Long idSlo) {
+        this.idSlo = idSlo;
     }
 
     public Long getIdEmp() {
