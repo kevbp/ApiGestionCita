@@ -21,8 +21,8 @@ public class ApiGestionCita {
         return serv.grabar(ent);
     }
     
-    @GetMapping("/buscar")
-    public SalidaCita buscar(@PathVariable Long idHor) {
-        return serv.buscar(idHor);
+    @GetMapping("/buscar/{idCit}")
+    public SalidaCita buscar(@PathVariable Long idCit) {
+        return serv.buscar(idCit);
     }
 }

@@ -46,7 +46,11 @@ public class ServicioGestionCita {
 
         String urlCit = "http://ApiCita/cita/grabar";
         CitaDTO citReg = resTem.postForObject(urlCit, cit, CitaDTO.class);
-
+        
+        slo.setEst("Ocupado");
+        String urlActSlot ="http://ApiSlotHorario/slotHorario/actualizar/"+ slo.getId();
+        resTem.put(urlActSlot, slo);
+        
         return buscar(citReg.getId());
     }
 
@@ -55,9 +59,9 @@ public class ServicioGestionCita {
         CitaDTO cit = resTem.getForObject(urlBusCit, CitaDTO.class);
 
         String urlBusPac = "http://ApiPaciente/paciente/buscar/" + cit.getIdPac();
-        String urlBusEsp = "http://ApiHistoria/historia/buscar/" + cit.getIdEsp();
-        String urlBusMed = "http://ApiHistoria/historia/buscar/" + cit.getIdMed();
-        String urlBusEmp = "http://ApiHistoria/historia/buscar/" + cit.getIdEmp();
+        String urlBusEsp = "http://ApiEspecialidad/especialidad/buscar/" + cit.getIdEsp();
+        String urlBusMed = "http://ApiMedico/medico/buscar/" + cit.getIdMed();
+        String urlBusEmp = "http://ApiEmpleado/empleado/buscar/" + cit.getIdEmp();
 
         PacienteDTO pac = resTem.getForObject(urlBusPac, PacienteDTO.class);
         EspecialidadDTO esp = resTem.getForObject(urlBusEsp, EspecialidadDTO.class);
